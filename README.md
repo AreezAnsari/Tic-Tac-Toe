@@ -1,27 +1,43 @@
-# Tic Tac Toe Game 🎮
+Tic Tac Toe Game 🎮
+An enhanced and interactive Tic Tac Toe game built using HTML, CSS, and JavaScript — now with a twist!
+Forget boring ties — in this version, each player can only have 3 moves on the board at a time. When a player makes their 4th move, their oldest move disappears, giving the opponent a chance to strike back. This makes the game faster, more strategic, and always ends with a winner! 🏆
 
-A simple and interactive **Tic Tac Toe** game built using HTML, CSS, and JavaScript. This is a two-player game where players take turns marking X and O on a 3×3 grid. The first player to get 3 marks in a row (horizontally, vertically, or diagonally) wins!
+---Technologies Used
+HTML5 – Game structure
 
-## 🛠️ Technologies Used
-- **HTML5** – Game structure
-- **CSS3** – Styling and layout
-- **JavaScript** – Game logic and interactivity
+CSS3 – Styling, layout, animations, and responsive design
 
-## 🎯 Features
-- Two-player mode (X vs O)
-- Displays win, draw, and reset
-- Highlighting winning combination
-- Clean and responsive design
+JavaScript (ES6) – Game logic, move tracking, and interactivity
 
-## 🚀 How to Play
-1. Open `index.html` in your browser.
-2. Click on any square to make a move.
-3. The game will announce the winner or if it's a draw.
-4. Click the reset button to start a new game.
+---Features
+Two-player mode (X vs O)
 
-## 📷 Screenshot
-(Add one using: `![Game Screenshot](image-url)`)
+No ties — only win or lose
 
----
+3-move limit per player for strategic gameplay
+
+Superscript move numbers to track move order visually
+
+Animated winning highlight
+
+Fully responsive for desktop and mobile
+
+Modern 3D buttons and gradient-glow title
+
+---How to Play
+Open index.html in your browser.
+
+Player X starts first, then O takes a turn.
+
+Each player can place only 3 marks on the board.
+
+On the 4th move, the oldest mark disappears automatically.
+
+First to align 3 marks horizontally, vertically, or diagonally wins!
+
+Click Reset or New Game to start again.
+
+📷 Screenshot
+(Add one using: ![Game Screenshot](image-url))
 
 Made with ❤️ by Areez Ansari
