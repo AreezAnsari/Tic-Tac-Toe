@@ -1,85 +1,85 @@
 let box = document.querySelectorAll(".box");
-let button = document.querySelector("button");
-let container = document.querySelector(".container");
+let resetbtn = document.querySelector(".reset-btn");
 let msgcontainer = document.querySelector(".msg-container");
 let newbtn = document.querySelector(".new-btn");
-let resetbtn = document.querySelector(".reset-btn");
 let msg = document.querySelector(".msg");
-let head = document.querySelector("h1");
 
-// let X=prompt("Enter your name for X");
-// let O=prompt("Enter your name for O");
-
-let isOTurn = true; // boolean
+let isOTurn = true; // O starts
+let movesO = []; // store {index, order}
+let movesX = [];
 
 const win = [
-  //   0,1,2 pattern[0,1,2]-----
-  [0, 1, 2], //win[0]
-  [0, 3, 6], //win[1]
-  [0, 4, 8], //win[2]
-  [1, 4, 7], //win[3]
-  [2, 5, 8], //win[4]
-  [2, 4, 6], //win[5]
-  [3, 4, 5], //win[6]
-  [6, 7, 8], //win[7]
+  [0, 1, 2], [0, 3, 6], [0, 4, 8],
+  [1, 4, 7], [2, 5, 8], [2, 4, 6],
+  [3, 4, 5], [6, 7, 8],
 ];
 
-box.forEach((box) => {
+box.forEach((b, idx) => {
   resetbtn.classList.remove("hide");
-  box.addEventListener("click", () => {
-    if (box.innerText !== "") return;
+  b.addEventListener("click", () => {
+    if (b.innerText !== "") return;
 
     if (isOTurn) {
-      box.innerText = "O";
+      addMove(movesO, "O", idx);
     } else {
-      box.innerText = "X";
+      addMove(movesX, "X", idx);
     }
 
-    box.disabled = true;
-    isOTurn = !isOTurn; // Toggle turn
-
     checkWinner();
+    isOTurn = !isOTurn;
   });
 });
 
+function addMove(movesArr, symbol, idx) {
+  // Add move to array
+  movesArr.push({ index: idx });
+
+  // If more than 3 moves, remove oldest
+  if (movesArr.length > 3) {
+    let removed = movesArr.shift();
+    box[removed.index].innerHTML = "";
+    box[removed.index].disabled = false;
+  }
+
+  // Update numbering for current player
+  movesArr.forEach((move, i) => {
+    box[move.index].innerHTML = `${symbol}<sup>${i + 1}</sup>`;
+    box[move.index].disabled = true;
+  });
+}
+
 const resbtn = () => {
   isOTurn = true;
+  movesO = [];
+  movesX = [];
   enablebtn();
   msgcontainer.classList.add("hide");
   resetbtn.classList.remove("hide");
 };
 
 const disablebtn = () => {
-  for (let boxes of box) {
-    boxes.disabled = true;
-  }
+  box.forEach(b => b.disabled = true);
 };
 
 const enablebtn = () => {
-  for (let boxes of box) {
-    boxes.disabled = false;
-    boxes.innerText = "";
-  }
+  box.forEach(b => {
+    b.disabled = false;
+    b.innerHTML = "";
+  });
 };
 
 const checkWinner = () => {
   for (let pattern of win) {
-    let post1 = box[pattern[0]].innerText;
-    let post2 = box[pattern[1]].innerText;
-    let post3 = box[pattern[2]].innerText;
+    let p1 = box[pattern[0]].innerText.charAt(0);
+    let p2 = box[pattern[1]].innerText.charAt(0);
+    let p3 = box[pattern[2]].innerText.charAt(0);
 
-    if (
-      post1 == "X" ||
-      (post1 == "O" && post2 == "X") ||
-      (post2 == "O" && post3 == "X") ||
-      post3 == "O"
-    ) {
-      if (post1 === post2 && post2 === post3 && post1 !== "") {
-        msg.innerText = `Congratulations! player ${post1} wins`;
-        msgcontainer.classList.remove("hide");
-        resetbtn.classList.add("hide");
-        disablebtn();
-      }
+    if (p1 !== "" && p1 === p2 && p2 === p3) {
+      msg.innerText = `Congratulations! Player ${p1} wins 🎉`;
+      msgcontainer.classList.remove("hide");
+      resetbtn.classList.add("hide");
+      disablebtn();
+      return;
     }
   }
 };
