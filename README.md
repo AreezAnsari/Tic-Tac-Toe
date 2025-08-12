@@ -39,5 +39,4 @@ Click Reset or New Game to start again.
 
 📷 Screenshot
 (Add one using: ![Game Screenshot](Game/images/screenshot.png))
-
 Made with ❤️ by Areez Ansari
