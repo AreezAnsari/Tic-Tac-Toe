@@ -38,6 +38,6 @@ First to align 3 marks horizontally, vertically, or diagonally wins!
 Click Reset or New Game to start again.
 
 📷 Screenshot
-(Add one using: ![Game Screenshot](images/screenshot.png))
+(Add one using: ![Game Screenshot](Game/images/screenshot.png))
 
 Made with ❤️ by Areez Ansari
