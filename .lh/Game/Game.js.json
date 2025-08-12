@@ -1,0 +1,58 @@
+{
+    "sourceFile": "Game/Game.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1748759547276,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1748759563948,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n let value=\"X\";\n \n const btn = () => {\n   if (value === \"X\") {\n-    color = \"yellow\";\n+    Value = \"X\";\n   } else if (color === \"yellow\") {\n     body.style.backgroundColor = \"black\";\n     button.setAttribute(\"class\", \"button3\");\n     button.innerText = \"Light Mode\";\n"
+                },
+                {
+                    "date": 1748759622002,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,18 +5,12 @@\n let value=\"X\";\n \n const btn = () => {\n   if (value === \"X\") {\n+    box.innerText=\"Y\"\n+    Value = \"Y\";\n+  } else {\n+    box.innerText=\"X\"\n     Value = \"X\";\n-  } else if (color === \"yellow\") {\n-    body.style.backgroundColor = \"black\";\n-    button.setAttribute(\"class\", \"button3\");\n-    button.innerText = \"Light Mode\";\n-    color = \"black\";\n-  } else if (color === \"black\") {\n-    body.style.backgroundColor = \"white\";\n-    button.setAttribute(\"class\", \"button\");\n-    button.innerText = \"Yellow Mode\";\n-    color = \"white\";\n   }\n };\n \n"
+                },
+                {
+                    "date": 1748759703625,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,4 +13,5 @@\n     Value = \"X\";\n   }\n };\n \n+box.addEventListener(\"click\", btn);\n"
+                },
+                {
+                    "date": 1748759739834,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n let box=document.querySelectorAll(\".box\");\n let button=document.querySelector(\"button\");\n let container=document.querySelector(\".container\");\n \n-let value=\"X\";\n+let box.innerText=\"X\";\n \n const btn = () => {\n   if (value === \"X\") {\n     box.innerText=\"Y\"\n"
+                },
+                {
+                    "date": 1748759745610,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n let box=document.querySelectorAll(\".box\");\n let button=document.querySelector(\"button\");\n let container=document.querySelector(\".container\");\n \n-let box.innerText=\"X\";\n+let value=box.innerText=\"X\";\n \n const btn = () => {\n   if (value === \"X\") {\n     box.innerText=\"Y\"\n"
+                },
+                {
+                    "date": 1748759773732,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n let box=document.querySelectorAll(\".box\");\n let button=document.querySelector(\"button\");\n let container=document.querySelector(\".container\");\n \n-let value=box.innerText=\"X\";\n+let value=\"X\";\n \n const btn = () => {\n   if (value === \"X\") {\n     box.innerText=\"Y\"\n"
+                },
+                {
+                    "date": 1748759855531,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,16 @@\n-let box=document.querySelectorAll(\".box\");\n-let button=document.querySelector(\"button\");\n-let container=document.querySelector(\".container\");\n+let box = document.querySelectorAll(\".box\");\n+let button = document.querySelector(\"button\");\n+let container = document.querySelector(\".container\");\n \n-let value=\"X\";\n+let value = \"X\";\n \n const btn = () => {\n   if (value === \"X\") {\n-    box.innerText=\"Y\"\n+    button.innerText = \"Y\";\n     Value = \"Y\";\n   } else {\n-    box.innerText=\"X\"\n+    box.innerText = \"X\";\n     Value = \"X\";\n   }\n };\n \n"
+                },
+                {
+                    "date": 1748759870206,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,12 +5,12 @@\n let value = \"X\";\n \n const btn = () => {\n   if (value === \"X\") {\n-    button.innerText = \"Y\";\n+    button.innerHTML = \"Y\";\n     Value = \"Y\";\n   } else {\n-    box.innerText = \"X\";\n+    button.innerText = \"X\";\n     Value = \"X\";\n   }\n };\n \n"
+                },
+                {
+                    "date": 1748759955991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,14 +4,14 @@\n \n let value = \"X\";\n \n const btn = () => {\n-  if (value === \"X\") {\n+if (value === \"X\") {\n     button.innerHTML = \"Y\";\n     Value = \"Y\";\n-  } else {\n+} else {\n     button.innerHTML = \"X\";\n     Value = \"X\";\n-  }\n+}\n };\n \n box.addEventListener(\"click\", btn);\n"
+                },
+                {
+                    "date": 1748760581379,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \n box.forEach((box)=>{\n box.addEventListener(\"click\",()=>\n {\n-    if(value)\n+    if(value===\"X\")\n     {\n         box.innerText=\"X\";\n         value=\"O\";\n     }\n"
+                }
+            ],
+            "date": 1748759547276,
+            "name": "Commit-0",
+            "content": "let box=document.querySelectorAll(\".box\");\nlet button=document.querySelector(\"button\");\nlet container=document.querySelector(\".container\");\n\nlet value=\"X\";\n\nconst btn = () => {\n  if (value === \"X\") {\n    color = \"yellow\";\n  } else if (color === \"yellow\") {\n    body.style.backgroundColor = \"black\";\n    button.setAttribute(\"class\", \"button3\");\n    button.innerText = \"Light Mode\";\n    color = \"black\";\n  } else if (color === \"black\") {\n    body.style.backgroundColor = \"white\";\n    button.setAttribute(\"class\", \"button\");\n    button.innerText = \"Yellow Mode\";\n    color = \"white\";\n  }\n};\n\n"
+        }
+    ]
+}

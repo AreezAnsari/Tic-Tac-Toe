@@ -1,0 +1,90 @@
+{
+    "sourceFile": "Game/Game.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 18,
+            "patches": [
+                {
+                    "date": 1748759171135,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1748759760042,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,17 +10,17 @@\n     <main>\n         <h1>Tic Tac Toe</h1>\n     <div class=\"container\">\n         <div class=\"game\">\n+        <button class=\"box\">X</button>\n         <button class=\"box\"></button>\n         <button class=\"box\"></button>\n         <button class=\"box\"></button>\n         <button class=\"box\"></button>\n         <button class=\"box\"></button>\n         <button class=\"box\"></button>\n         <button class=\"box\"></button>\n         <button class=\"box\"></button>\n-        <button class=\"box\"></button>\n         </div>\n         </div>\n         <button class=\"reset-btn\">Reset</button>\n     </main>\n"
+                },
+                {
+                    "date": 1748760267370,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,17 +10,17 @@\n     <main>\n         <h1>Tic Tac Toe</h1>\n     <div class=\"container\">\n         <div class=\"game\">\n-        <button class=\"box\">X</button>\n         <button class=\"box\"></button>\n         <button class=\"box\"></button>\n         <button class=\"box\"></button>\n         <button class=\"box\"></button>\n         <button class=\"box\"></button>\n         <button class=\"box\"></button>\n         <button class=\"box\"></button>\n         <button class=\"box\"></button>\n+        <button class=\"box\"></button>\n         </div>\n         </div>\n         <button class=\"reset-btn\">Reset</button>\n     </main>\n"
+                },
+                {
+                    "date": 1748791768815,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,11 @@\n     <title>Document</title>\n     <link rel=\"stylesheet\" href=\"Game.css\">\n </head>\n <body>\n+    <div class=\"msg-container\">\n+        <p class=\"msg\">Winner</p>\n+    </div>\n     <main>\n         <h1>Tic Tac Toe</h1>\n     <div class=\"container\">\n         <div class=\"game\">\n"
+                },
+                {
+                    "date": 1748791799753,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n </head>\n <body>\n     <div class=\"msg-container\">\n         <p class=\"msg\">Winner</p>\n+        <button class=\"reset-btn\">Reset</button>\n     </div>\n     <main>\n         <h1>Tic Tac Toe</h1>\n     <div class=\"container\">\n"
+                },
+                {
+                    "date": 1748791808167,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n </head>\n <body>\n     <div class=\"msg-container\">\n         <p class=\"msg\">Winner</p>\n-        <button class=\"reset-btn\">Reset</button>\n+        <button class=\"new-btn\">New Game</button>\n     </div>\n     <main>\n         <h1>Tic Tac Toe</h1>\n     <div class=\"container\">\n"
+                },
+                {
+                    "date": 1748792273076,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     <title>Document</title>\n     <link rel=\"stylesheet\" href=\"Game.css\">\n </head>\n <body>\n-    <div class=\"msg-container\">\n+    <div class=\"msg-container hide\">\n         <p class=\"msg\">Winner</p>\n         <button class=\"new-btn\">New Game</button>\n     </div>\n     <main>\n"
+                },
+                {
+                    "date": 1748798874788,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n </head>\n <body>\n     <div class=\"msg-container hide\">\n         <p class=\"msg\">Winner</p>\n-        <button class=\"new-btn\">New Game</button>\n+        <button class=\"new-btn hide\">New Game</button>\n     </div>\n     <main>\n         <h1>Tic Tac Toe</h1>\n     <div class=\"container\">\n"
+                },
+                {
+                    "date": 1748798906901,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n </head>\n <body>\n     <div class=\"msg-container hide\">\n         <p class=\"msg\">Winner</p>\n-        <button class=\"new-btn hide\">New Game</button>\n+        <button class=\"new-btn\">New Game</button>\n     </div>\n     <main>\n         <h1>Tic Tac Toe</h1>\n     <div class=\"container\">\n"
+                },
+                {
+                    "date": 1748868245535,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n     <title>Document</title>\n     <link rel=\"stylesheet\" href=\"Game.css\">\n </head>\n <body>\n+    <div class=\"line\" id=\"win-line\"></div>\n     <div class=\"msg-container hide\">\n         <p class=\"msg\">Winner</p>\n         <button class=\"new-btn\">New Game</button>\n     </div>\n@@ -25,9 +26,9 @@\n         <button class=\"box\"></button>\n         <button class=\"box\"></button>\n         </div>\n         </div>\n-        <button class=\"reset-btn\">Reset</button>\n+        <button class=\"reset-btn hide\">Reset</button>\n     </main>\n     <script src=\"Game.js\"></script>\n </body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1748868257847,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,16 +6,17 @@\n     <title>Document</title>\n     <link rel=\"stylesheet\" href=\"Game.css\">\n </head>\n <body>\n-    <div class=\"line\" id=\"win-line\"></div>\n+    \n     <div class=\"msg-container hide\">\n         <p class=\"msg\">Winner</p>\n         <button class=\"new-btn\">New Game</button>\n     </div>\n     <main>\n         <h1>Tic Tac Toe</h1>\n     <div class=\"container\">\n+        <div class=\"line\" id=\"win-line\"></div>\n         <div class=\"game\">\n         <button class=\"box\"></button>\n         <button class=\"box\"></button>\n         <button class=\"box\"></button>\n"
+                },
+                {
+                    "date": 1748868386402,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,12 @@\n     </div>\n     <main>\n         <h1>Tic Tac Toe</h1>\n     <div class=\"container\">\n-        <div class=\"line\" id=\"win-line\"></div>\n+        <div class=\"vs-info\">\n+    <span class=\"player\">PLAYER (O)</span> vs \n+    <span class=\"computer\">COMPUTER (X)</span>\n+</div>\n         <div class=\"game\">\n         <button class=\"box\"></button>\n         <button class=\"box\"></button>\n         <button class=\"box\"></button>\n"
+                },
+                {
+                    "date": 1748868400795,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,20 +6,19 @@\n     <title>Document</title>\n     <link rel=\"stylesheet\" href=\"Game.css\">\n </head>\n <body>\n-    \n+    <div class=\"vs-info\">\n+    <span class=\"player\">PLAYER (O)</span> vs \n+    <span class=\"computer\">COMPUTER (X)</span>\n+</div>\n     <div class=\"msg-container hide\">\n         <p class=\"msg\">Winner</p>\n         <button class=\"new-btn\">New Game</button>\n     </div>\n     <main>\n         <h1>Tic Tac Toe</h1>\n     <div class=\"container\">\n-        <div class=\"vs-info\">\n-    <span class=\"player\">PLAYER (O)</span> vs \n-    <span class=\"computer\">COMPUTER (X)</span>\n-</div>\n         <div class=\"game\">\n         <button class=\"box\"></button>\n         <button class=\"box\"></button>\n         <button class=\"box\"></button>\n"
+                },
+                {
+                    "date": 1748868413320,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,16 +6,17 @@\n     <title>Document</title>\n     <link rel=\"stylesheet\" href=\"Game.css\">\n </head>\n <body>\n+    \n+    <div class=\"msg-container hide\">\n+        <p class=\"msg\">Winner</p>\n+        <button class=\"new-btn\">New Game</button>\n+    </div>\n     <div class=\"vs-info\">\n     <span class=\"player\">PLAYER (O)</span> vs \n     <span class=\"computer\">COMPUTER (X)</span>\n </div>\n-    <div class=\"msg-container hide\">\n-        <p class=\"msg\">Winner</p>\n-        <button class=\"new-btn\">New Game</button>\n-    </div>\n     <main>\n         <h1>Tic Tac Toe</h1>\n     <div class=\"container\">\n         <div class=\"game\">\n"
+                },
+                {
+                    "date": 1753164901381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,12 +11,8 @@\n     <div class=\"msg-container hide\">\n         <p class=\"msg\">Winner</p>\n         <button class=\"new-btn\">New Game</button>\n     </div>\n-    <div class=\"vs-info\">\n-    <span class=\"player\">PLAYER (O)</span> vs \n-    <span class=\"computer\">COMPUTER (X)</span>\n-</div>\n     <main>\n         <h1>Tic Tac Toe</h1>\n     <div class=\"container\">\n         <div class=\"game\">\n"
+                },
+                {
+                    "date": 1753168136469,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,17 +6,18 @@\n     <title>Document</title>\n     <link rel=\"stylesheet\" href=\"Game.css\">\n </head>\n <body>\n-    \n-    <div class=\"msg-container hide\">\n-        <p class=\"msg\">Winner</p>\n-        <button class=\"new-btn\">New Game</button>\n-    </div>\n-    <main>\n-        <h1>Tic Tac Toe</h1>\n+  <div class=\"msg-container hide\">\n+    <p class=\"msg\">Winner</p>\n+    <button class=\"new-btn\">New Game</button>\n+  </div>\n+\n+  <main>\n     <div class=\"container\">\n-        <div class=\"game\">\n+      <h1>Tic Tac Toe</h1>\n+\n+      <div class=\"game\">\n         <button class=\"box\"></button>\n         <button class=\"box\"></button>\n         <button class=\"box\"></button>\n         <button class=\"box\"></button>\n@@ -24,11 +25,14 @@\n         <button class=\"box\"></button>\n         <button class=\"box\"></button>\n         <button class=\"box\"></button>\n         <button class=\"box\"></button>\n-        </div>\n-        </div>\n-        <button class=\"reset-btn hide\">Reset</button>\n-    </main>\n-    <script src=\"Game.js\"></script>\n+      </div>\n+\n+      <button class=\"reset-btn hide\">Reset</button>\n+    </div>\n+  </main>\n+\n+  <script src=\"Game.js\"></script>\n </body>\n+\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753168276216,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,11 @@\n     <title>Document</title>\n     <link rel=\"stylesheet\" href=\"Game.css\">\n </head>\n <body>\n+  <!-- Winner message container at the very top -->\n   <div class=\"msg-container hide\">\n-    <p class=\"msg\">Winner</p>\n+    <p class=\"msg\">🎉 Congratulations! Player X Wins</p>\n     <button class=\"new-btn\">New Game</button>\n   </div>\n \n   <main>\n"
+                },
+                {
+                    "date": 1753168285353,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,19 +6,21 @@\n     <title>Document</title>\n     <link rel=\"stylesheet\" href=\"Game.css\">\n </head>\n <body>\n-  <!-- Winner message container at the very top -->\n-  <div class=\"msg-container hide\">\n-    <p class=\"msg\">🎉 Congratulations! Player X Wins</p>\n-    <button class=\"new-btn\">New Game</button>\n-  </div>\n-\n-  <main>\n+    \n+    <div class=\"msg-container hide\">\n+        <p class=\"msg\">Winner</p>\n+        <button class=\"new-btn\">New Game</button>\n+    </div>\n+    <div class=\"vs-info\">\n+    <span class=\"player\">PLAYER (O)</span> vs \n+    <span class=\"computer\">COMPUTER (X)</span>\n+</div>\n+    <main>\n+        <h1>Tic Tac Toe</h1>\n     <div class=\"container\">\n-      <h1>Tic Tac Toe</h1>\n-\n-      <div class=\"game\">\n+        <div class=\"game\">\n         <button class=\"box\"></button>\n         <button class=\"box\"></button>\n         <button class=\"box\"></button>\n         <button class=\"box\"></button>\n@@ -26,14 +28,11 @@\n         <button class=\"box\"></button>\n         <button class=\"box\"></button>\n         <button class=\"box\"></button>\n         <button class=\"box\"></button>\n-      </div>\n-\n-      <button class=\"reset-btn hide\">Reset</button>\n-    </div>\n-  </main>\n-\n-  <script src=\"Game.js\"></script>\n+        </div>\n+        </div>\n+        <button class=\"reset-btn hide\">Reset</button>\n+    </main>\n+    <script src=\"Game.js\"></script>\n </body>\n-\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1753168316021,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,14 +10,9 @@\n     \n     <div class=\"msg-container hide\">\n         <p class=\"msg\">Winner</p>\n         <button class=\"new-btn\">New Game</button>\n-    </div>\n-    <div class=\"vs-info\">\n-    <span class=\"player\">PLAYER (O)</span> vs \n-    <span class=\"computer\">COMPUTER (X)</span>\n-</div>\n-    <main>\n+    </div>    <main>\n         <h1>Tic Tac Toe</h1>\n     <div class=\"container\">\n         <div class=\"game\">\n         <button class=\"box\"></button>\n"
+                }
+            ],
+            "date": 1748759171135,
+            "name": "Commit-0",
+            "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Document</title>\n    <link rel=\"stylesheet\" href=\"Game.css\">\n</head>\n<body>\n    <main>\n        <h1>Tic Tac Toe</h1>\n    <div class=\"container\">\n        <div class=\"game\">\n        <button class=\"box\"></button>\n        <button class=\"box\"></button>\n        <button class=\"box\"></button>\n        <button class=\"box\"></button>\n        <button class=\"box\"></button>\n        <button class=\"box\"></button>\n        <button class=\"box\"></button>\n        <button class=\"box\"></button>\n        <button class=\"box\"></button>\n        </div>\n        </div>\n        <button class=\"reset-btn\">Reset</button>\n    </main>\n    <script src=\"Game.js\"></script>\n</body>\n</html>"
+        }
+    ]
+}
